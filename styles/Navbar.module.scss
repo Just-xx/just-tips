@@ -1,0 +1,136 @@
+@import './variables.scss';
+
+.wrapper {
+    background-color: #fff;
+    width: 100vw;
+    min-width: 160px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    box-shadow: $shadow-soft;
+    font-size: 16px;
+    position: relative;
+    z-index: 2;
+
+    @media screen and (max-width: 1050px) {
+        padding: 0 8vw;
+        font-size: 14px;
+    }
+
+    @media screen and (max-width: 500px) {
+        font-size: 12px;
+    }
+
+    @media screen and (max-width: 350px) {
+        justify-content: space-between;
+    }
+}
+
+.logoText {
+    color: $color-dark-700;
+    font-weight: 900;
+    font-size: 1.6em;
+}
+
+.dotsWrapper {
+    display: flex;
+    gap: 5vw;
+
+    @media screen and (max-width: 1156px) {
+        gap: 3vw;
+    }
+
+    @media screen and (max-width: 850px) {
+        display: none;
+    }
+}
+
+.dot {
+    background-color: $color-light-700;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.navLinks {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+
+    @media screen and (max-width: 650px) {
+        gap: 20px;
+    }
+
+    @media screen and (max-width: 350px) {
+        display: none;
+    }
+}
+
+.navlink {
+    color: $primary;
+    font-size: 1.05em;
+    font-weight: 500;
+}
+
+.bars {
+    display: block;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: $primary;
+    padding: 5px;
+    box-sizing: content-box;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid $primary;
+    transition: all 80ms linear;
+
+    @media screen and (min-width: 350px) {
+        display: none;
+    }
+}
+
+.barsActive {
+    color: $primary;
+    background-color: #fff;
+}
+
+
+.hamburgerMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    box-shadow: $shadow-soft;
+    background-color: #fff;
+    z-index: 1;
+
+    @media screen and (min-width: 350px) {
+        display: none;
+    }
+}
+
+.hamburgerNotVisible {
+    display: none;
+}
+
+.hamburgerMenuLink {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: $color-dark-600;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid $color-light-700;
+
+    &:last-child {
+        background-color: $primary;
+        color: #fff;
+    }
+}
